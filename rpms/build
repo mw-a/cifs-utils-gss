@@ -1,7 +1,7 @@
 CentOS 8:
-dnf --enablerepo=powertools install autoconf automake gcc keyutils-libs-devel krb5-devel libcap-ng-devel libtalloc-devel libwbclient-devel make pam-devel python3-docutils
+dnf --enablerepo=PowerTools install autoconf automake gcc keyutils-libs-devel krb5-devel libcap-ng-devel libtalloc-devel libwbclient-devel make pam-devel python3-docutils rpm-build
 rpmbuild -ba cifs-utils.spec --define="dist .el8.local1"
 
 CentOS 7:
-yum install autoconf automake gcc keyutils-libs-devel krb5-devel libcap-ng-devel libtalloc-devel make pam-devel python-docutils libwbclient-devel
+yum install autoconf automake gcc keyutils-libs-devel krb5-devel libcap-ng-devel libtalloc-devel make pam-devel python-docutils libwbclient-devel rpm-build
 rpmbuild -ba cifs-utils.spec --define="dist .el7.local1"

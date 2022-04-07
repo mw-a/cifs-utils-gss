@@ -1,0 +1,36 @@
+From f488c3f554413a09bd3915a31455df30fb70a40f Mon Sep 17 00:00:00 2001
+From: Jacob Shivers <jshivers@redhat.com>
+Date: Tue, 26 Oct 2021 10:57:41 -0400
+Subject: [PATCH 3/9] man-pages: Update cifs.upcall to mention GSS_USE_PROXY
+
+Add ENVIRONMENT VARIABLES section with the usage of gssproxy as
+a credential retrieval method.
+
+Signed-off-by: Jacob Shivers <jshivers@redhat.com>
+---
+ cifs.upcall.rst.in | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/cifs.upcall.rst.in b/cifs.upcall.rst.in
+index 08ce324..09d0503 100644
+--- a/cifs.upcall.rst.in
++++ b/cifs.upcall.rst.in
+@@ -91,6 +91,15 @@ OPTIONS
+ --version|-v
+   Print version number and exit.
+ 
++*********************
++ENVIRONMENT VARIABLES
++*********************
++
++GSS_USE_PROXY="yes"
++  Enable usage of gssproxy for credential retrieval. This includes keytab
++  based client initiation as well as (Resource Based) Constrained Delegation.
++  See gssproxy-mech(8).
++
+ ************************
+ CONFIGURATION FOR KEYCTL
+ ************************
+-- 
+2.35.1
+
